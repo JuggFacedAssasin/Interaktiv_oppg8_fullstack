@@ -16,6 +16,10 @@ export default {
         slugify: (input) => input.toLowerCase().replace(/\s+/g, '-').slice(0, 200),
       },
       validation: (Rule) => Rule.required(),
+    },{
+      type: 'text',
+      name: 'bio',
+      title: 'Bio',
     }
   ]
 }

@@ -12,6 +12,10 @@ export default {
       name: 'actor',
       title: 'Actor',
       to: {type: 'actor'}
+    },{
+      type: 'text',
+      name: 'description',
+      title: 'Description',
     }
   ]
 }

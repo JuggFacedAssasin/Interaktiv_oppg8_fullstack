@@ -9,21 +9,22 @@ import Navigation from './components/Navigation';
 
 function App() {
 
-  const [data, setData] = useState('')
+  const [dataM, setDataM] = useState('')
+  const [dataA, setDataA] = useState('')
 
   return (
     <div className="App">
       <Navigation />
-      <h2>APP JESS</h2>
+      <h2>Movie / actor database</h2>
 
       <Routes>
-      <Route index element={ <Movies data={ data } setData={ setData } />}></Route>
+      <Route index element={ <Movies dataM={ dataM } setDataM={ setDataM } />}></Route>
         <Route path="Movies">
-          <Route index element={ <Movies />}></Route>
+          <Route index element={ <Movies dataM={ dataM } setDataM={ setDataM } />}></Route>
           <Route path=':id' element={ <Movie /> }></Route>
         </Route>
         <Route path="Actors">
-          <Route index element={ <Actors />}></Route>
+          <Route index element={ <Actors dataA={ dataA } setDataA={ setDataA } />}></Route>
           <Route path=':id' element={ <Actor /> }></Route>
         </Route>
       </Routes>

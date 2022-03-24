@@ -1,13 +1,27 @@
-const Movies = ({ data, setData }) => {
+import { getMovies } from "../lib/services/movieService";
+
+
+
+const Movies = ({ dataM, setDataM }) => {
   
-  const click = () => {
-    console.log('du trykket nettopp på en knapp. Gratulerer....')
+  const clickM = async () => {
+    const moviePack = await getMovies()
+    setDataM(moviePack)
   }
   
   return(
     <>
-      <p>Lord of the rings trilogy Movies</p>
-      <button type="button" onClick={click} >Click</button>
+      <button type="button" onClick={clickM} >Movie</button>
+      {dataM?.length > 0 ? dataM.map((movieArray)=>{
+        return(
+          <article key={ movieArray.title }>
+            <h2>{ movieArray.title }</h2>
+            <p>{ movieArray._type }</p>
+            <p>{ movieArray.actor }</p>
+            <p>{ movieArray.description }</p>
+          </article>
+        )
+      }):null}
     </>
   )
 }
