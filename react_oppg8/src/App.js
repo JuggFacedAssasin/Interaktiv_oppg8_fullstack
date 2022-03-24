@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Actor from './components/Actor';
+import Actors from './components/Actors';
+import Movie from './components/Movie';
+import Movies from './components/Movies';
+import Navigation from './components/Navigation';
 
 function App() {
+
+  const [data, setData] = useState('')
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation />
+      <h2>APP JESS</h2>
+
+      <Routes>
+      <Route index element={ <Movies data={ data } setData={ setData } />}></Route>
+        <Route path="Movies">
+          <Route index element={ <Movies />}></Route>
+          <Route path=':id' element={ <Movie /> }></Route>
+        </Route>
+        <Route path="Actors">
+          <Route index element={ <Actors />}></Route>
+          <Route path=':id' element={ <Actor /> }></Route>
+        </Route>
+      </Routes>
     </div>
   );
 }
