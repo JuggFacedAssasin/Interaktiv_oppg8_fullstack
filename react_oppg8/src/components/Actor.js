@@ -1,6 +1,21 @@
-const Actor = () => {
+import { useParams, Link } from "react-router-dom";
+
+const Actor = ({ dataA }) => {
+  
+  const {name}=useParams()
+  
+  const actorBioArray = dataA.find((actorBio)=>{
+    return actorBio.slug === name
+  })
+
   return(
-    <p>Yahye liker Mac Actorrrrrrr and its a sunny day</p>
+    <article>
+      <img src={actorBioArray.portrait.asset.url} alt="missing portrait"></img>
+      <h2>{actorBioArray.fullname}</h2>
+      <p>{actorBioArray._type}</p>
+      <p>{actorBioArray.bio}</p>
+      <button><Link to="/Actors">tilbake</Link></button>
+    </article>
   )
 }
 

@@ -1,4 +1,5 @@
 import { getActors } from "../lib/services/movieService";
+import { Link } from 'react-router-dom';
 
 const Actors = ({ dataA, setDataA }) => {
   
@@ -14,8 +15,7 @@ const Actors = ({ dataA, setDataA }) => {
         return (
         <article key={ actorArray.fullname }>
           <h1>{ actorArray.fullname }</h1>
-          <p>{ actorArray._type }</p>
-          <p>{ actorArray.bio }</p>
+          <button><Link to={ actorArray.slug } >Actor bio</Link></button>
         </article>
         )
       }) :null }

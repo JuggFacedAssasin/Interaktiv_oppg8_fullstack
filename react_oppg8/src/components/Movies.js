@@ -1,4 +1,5 @@
 import { getMovies } from "../lib/services/movieService";
+import { Link } from 'react-router-dom'
 
 
 
@@ -16,9 +17,7 @@ const Movies = ({ dataM, setDataM }) => {
         return(
           <article key={ movieArray.title }>
             <h2>{ movieArray.title }</h2>
-            <p>{ movieArray._type }</p>
-            <p>{ movieArray.actor }</p>
-            <p>{ movieArray.description }</p>
+            <button><Link to={ movieArray.slug }>Movie info</Link></button>
           </article>
         )
       }):null}

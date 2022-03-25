@@ -20,6 +20,10 @@ export default {
       type: 'text',
       name: 'bio',
       title: 'Bio',
+    },{
+      type: 'image',
+      name: 'portrait',
+      title: 'Portrait',
     }
   ]
 }

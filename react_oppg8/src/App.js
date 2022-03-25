@@ -18,14 +18,14 @@ function App() {
       <h2>Movie / actor database</h2>
 
       <Routes>
-      <Route index element={ <Movies dataM={ dataM } setDataM={ setDataM } />}></Route>
-        <Route path="Movies">
-          <Route index element={ <Movies dataM={ dataM } setDataM={ setDataM } />}></Route>
-          <Route path=':id' element={ <Movie /> }></Route>
-        </Route>
+        <Route index element={ <Movies dataM={ dataM } setDataM={ setDataM } />}></Route>
+          <Route path="Movies">
+            <Route index element={ <Movies dataM={ dataM } setDataM={ setDataM } />}></Route>
+            <Route path=':name' element={ <Movie dataM={ dataM } /> }></Route>
+          </Route>
         <Route path="Actors">
           <Route index element={ <Actors dataA={ dataA } setDataA={ setDataA } />}></Route>
-          <Route path=':id' element={ <Actor /> }></Route>
+          <Route path=':name' element={ <Actor dataA={dataA} /> }></Route>
         </Route>
       </Routes>
     </div>
