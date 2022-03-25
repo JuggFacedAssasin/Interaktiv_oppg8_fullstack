@@ -13,9 +13,12 @@ year,`
 const actorFields = `
 _type,
 fullname,
-bio,
+bio,  
 "slug": name.current,
-"portrait":portrait{asset->{url}},`
+"portrait":portrait{asset->{url}},
+"movierole": movierole->movieSlug.current,
+"movierole2": movierole2->movieSlug.current,
+"movierole3": movierole3->movieSlug.current,`
 
 export async function getMovies(){
   const dataM = await client.fetch( `*[_type == "movie"]{${movieFields}}`)

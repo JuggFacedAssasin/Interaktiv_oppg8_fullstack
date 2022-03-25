@@ -1,5 +1,6 @@
 import { getMovies } from "../lib/services/movieService";
 import { Link } from 'react-router-dom'
+import { useEffect } from "react";
 
 
 
@@ -9,7 +10,11 @@ const Movies = ({ dataM, setDataM }) => {
     const moviePack = await getMovies()
     setDataM(moviePack)
   }
-  
+
+useEffect(()=>{
+  clickM()
+}, null)
+
   return(
     <>
       <button type="button" onClick={clickM} >Movie</button>

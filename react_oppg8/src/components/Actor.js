@@ -13,6 +13,7 @@ const Actor = ({ dataA }) => {
       <img src={actorBioArray.portrait.asset.url} alt="missing portrait"></img>
       <h2>{actorBioArray.fullname}</h2>
       <p>{actorBioArray._type}</p>
+      <p>Apeared in: {actorBioArray.movierole}, {actorBioArray.movierole2}, {actorBioArray.movierole3}</p>
       <p>{actorBioArray.bio}</p>
       <button><Link to="/Actors">tilbake</Link></button>
     </article>

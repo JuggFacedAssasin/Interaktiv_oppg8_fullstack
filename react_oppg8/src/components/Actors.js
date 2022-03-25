@@ -1,5 +1,6 @@
 import { getActors } from "../lib/services/movieService";
 import { Link } from 'react-router-dom';
+import { useEffect } from "react";
 
 const Actors = ({ dataA, setDataA }) => {
   
@@ -7,7 +8,11 @@ const Actors = ({ dataA, setDataA }) => {
     const actorPack = await getActors()
     setDataA(actorPack)
   }
-    
+
+ useEffect(()=>{
+  clickA()
+ }, []) 
+
   return(
     <>
       <button type="button" onClick={clickA}>Actor</button>

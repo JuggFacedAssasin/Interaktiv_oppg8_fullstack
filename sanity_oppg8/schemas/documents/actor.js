@@ -24,6 +24,21 @@ export default {
       type: 'image',
       name: 'portrait',
       title: 'Portrait',
-    }
+    },{
+      type: 'reference',
+      name: 'movierole',
+      title: 'Movie role',
+      to: {type: 'movie'}
+    },{
+      type: 'reference',
+      name: 'movierole2',
+      title: 'Movie role',
+      to: {type: 'movie'}
+    },{
+      type: 'reference',
+      name: 'movierole3',
+      title: 'Movie role',
+      to: {type: 'movie'}
+    },
   ]
 }
