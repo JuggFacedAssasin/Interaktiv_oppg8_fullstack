@@ -13,7 +13,8 @@ function App() {
   const [dataA, setDataA] = useState('')
 
   return (
-    <div className="App">
+  <>
+    <div className='appDiv'>
       <Navigation />
       <h2>Movie / actor database</h2>
 
@@ -29,6 +30,11 @@ function App() {
         </Route>
       </Routes>
     </div>
+    <footer className='appFooter'>
+      <p>Laget av Jørgen</p>
+      <p>Høgskolen i Østfold - 2022</p>
+    </footer>
+  </>
   );
 }
 

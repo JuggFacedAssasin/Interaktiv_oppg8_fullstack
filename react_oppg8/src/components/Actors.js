@@ -14,17 +14,22 @@ const Actors = ({ dataA, setDataA }) => {
  }, []) 
 
   return(
-    <>
-      <button type="button" onClick={clickA}>Actor</button>
+  <>
+    <button type="button" onClick={clickA}>Actor</button>
+    <article>
       {dataA?.length > 0 ? dataA.map((actorArray)=>{
         return (
-        <article key={ actorArray.fullname }>
-          <h1>{ actorArray.fullname }</h1>
-          <button><Link to={ actorArray.slug } >Actor bio</Link></button>
-        </article>
+        <div className="actorsDiv">
+          <article key={ actorArray.fullname }>
+            <img src={actorArray.portrait.asset.url} alt="missing portrait" className="imgClassActors"></img>
+            <h1>{ actorArray.fullname }</h1>
+            <button><Link to={ actorArray.slug } >Actor bio</Link></button>
+          </article>
+        </div>
         )
       }) :null }
-    </>
+    </article>
+  </>
   )
 }
 

@@ -1,0 +1,109 @@
+.appDiv{
+  padding: 15px;
+}
+
+.appDiv nav{
+  border-radius: 20px;
+  display: flex;
+  background-color: aqua;
+  height: 70px;
+  align-items: center;
+  
+}
+
+.appDiv nav ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 250px;
+  margin: 0 auto;
+}
+
+.appDiv h2{
+  text-align: center;
+}
+
+.appDiv nav ul li a{
+  text-decoration: none;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 35%;
+  background-color: darkslateblue;
+  color: white;
+}
+
+.appDiv nav ul li a:hover{
+  color: black;
+  background-color: aquamarine;
+}
+
+.appDiv article{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.actorsDiv, .moviesDiv{
+  background-color: aquamarine;
+  padding: 10px;
+  text-align: center;
+  border: 6px double blue;
+  justify-content: space-around;
+  width: 300px;
+}
+
+.actorsDiv button, .moviesDiv button{
+  width: 100px;
+  padding: 1%;
+  border-radius: 20%;
+}
+.actorsDiv button a, .moviesDiv button a{
+  text-decoration: none;
+}
+.actorsDiv button:hover, .moviesDiv button:hover{
+  background-color: blue;
+}
+.actorsDiv button a:hover, .moviesDiv button a:hover{
+  color: red;
+}
+
+.actorsDiv article, .moviesDiv article{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.movieArticle, .actorArticle{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 0 auto;
+  background-color: aquamarine;
+  padding: 2%;
+  text-align: center;
+}
+
+.movieArticle p, .actorArticle p{
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: rgb(82, 255, 197);
+  padding: 2%;
+}
+
+.movieArticle img, .actorArticle img{
+  width: 300px;
+}
+
+.imgClassActors, .imgClassMovies{
+  width: 300px;
+  height: 350px;
+}
+
+.appFooter{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: aqua;
+  border-radius: 20px;
+}

@@ -9,13 +9,13 @@ const Actor = ({ dataA }) => {
   })
 
   return(
-    <article>
+    <article className="actorArticle">
       <img src={actorBioArray.portrait.asset.url} alt="missing portrait"></img>
       <h2>{actorBioArray.fullname}</h2>
-      <p>{actorBioArray._type}</p>
-      <p>Apeared in: {actorBioArray.movierole}, {actorBioArray.movierole2}, {actorBioArray.movierole3}</p>
-      <p>{actorBioArray.bio}</p>
-      <button><Link to="/Actors">tilbake</Link></button>
+      <p><strong>Professsion: </strong>{actorBioArray._type}</p>
+      <p><strong>Apeared in: </strong>{actorBioArray.movierole}, {actorBioArray.movierole2}, {actorBioArray.movierole3}</p>
+      <p><strong>Mini bio: </strong><br></br>{actorBioArray.bio}</p>
+      <button><Link to="/Actors">Back</Link></button>
     </article>
   )
 }

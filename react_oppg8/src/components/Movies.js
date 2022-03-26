@@ -1,7 +1,7 @@
 import { getMovies } from "../lib/services/movieService";
 import { Link } from 'react-router-dom'
 import { useEffect } from "react";
-
+import { FaArrowRight } from 'react-icons/fa'
 
 
 const Movies = ({ dataM, setDataM }) => {
@@ -13,20 +13,25 @@ const Movies = ({ dataM, setDataM }) => {
 
 useEffect(()=>{
   clickM()
-}, null)
+}, [])
 
   return(
-    <>
-      <button type="button" onClick={clickM} >Movie</button>
+  <>
+    <button type="button" onClick={clickM} >Movie</button>
+    <article>
       {dataM?.length > 0 ? dataM.map((movieArray)=>{
         return(
-          <article key={ movieArray.title }>
-            <h2>{ movieArray.title }</h2>
-            <button><Link to={ movieArray.slug }>Movie info</Link></button>
-          </article>
+          <div className="moviesDiv">
+            <article key={ movieArray.title } >
+              <img src={movieArray.poster.asset.url} alt="Movie poster missing" className="imgClassMovies"></img>
+              <h1>{ movieArray.title } </h1>
+              <button><Link to={ movieArray.slug }>Movie info</Link></button>
+            </article>
+          </div>
         )
       }):null}
-    </>
+    </article>
+  </>
   )
 }
 
