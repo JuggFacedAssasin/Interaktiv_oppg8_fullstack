@@ -107,3 +107,8 @@
   background-color: aqua;
   border-radius: 20px;
 }
+
+.borderNone{
+  border: 1px solid aquamarine!important;
+  text-transform: capitalize;
+}
